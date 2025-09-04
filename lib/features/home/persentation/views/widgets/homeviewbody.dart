@@ -1,5 +1,5 @@
 import 'package:bookstore/features/home/persentation/views/widgets/customappbar.dart';
-import 'package:bookstore/features/home/persentation/views/widgets/customlistviewitem.dart';
+import 'package:bookstore/features/home/persentation/views/widgets/featuredbooklistview.dart';
 import 'package:flutter/material.dart';
 
 class Homeviewbody extends StatelessWidget {
@@ -7,6 +7,6 @@ class Homeviewbody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [customappbar(), custmomlistviewitem()]);
+    return Column(children: [customappbar(), featuredbookslistview()]);
   }
 }
