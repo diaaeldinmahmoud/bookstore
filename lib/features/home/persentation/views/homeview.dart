@@ -1,3 +1,4 @@
+import 'package:bookstore/features/home/persentation/views/widgets/homeviewbody.dart';
 import 'package:flutter/material.dart';
 
 class homeview extends StatelessWidget {
@@ -5,14 +6,6 @@ class homeview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Home View')),
-      body: const Center(
-        child: Text(
-          'Welcome to the Home View!',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
-    );
+    return Scaffold(body: const Homeviewbody());
   }
 }
