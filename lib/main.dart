@@ -1,6 +1,7 @@
 import 'package:bookstore/features/splash/persentation/views/splashview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'constants.dart';
 
 void main() {
   runApp(const bookstore());
@@ -11,6 +12,11 @@ class bookstore extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(home: splashview());
+    return GetMaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: const Color(Kprimarycolor),
+      ),
+      home: splashview(),
+    );
   }
 }
