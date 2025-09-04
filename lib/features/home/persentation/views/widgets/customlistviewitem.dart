@@ -10,7 +10,7 @@ class custmomlistviewitem extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           image: const DecorationImage(
-            image: AssetImage('assets/images/logo.jpg'),
+            image: AssetImage('assets/images/book cover.jpg'),
             fit: BoxFit.fill,
           ),
           borderRadius: BorderRadius.circular(20),
