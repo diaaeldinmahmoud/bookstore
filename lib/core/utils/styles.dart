@@ -59,9 +59,8 @@ abstract class Styles {
     fontWeight: FontWeight.w500,
   );
   static const TextStyle styleRegular14 = TextStyle(
-    color: Color(0xff064060),
+    color: Colors.white,
     fontSize: 14,
-    fontFamily: 'Montserrat',
     fontWeight: FontWeight.w400,
   );
 }
