@@ -1,4 +1,5 @@
 import 'package:bookstore/core/utils/styles.dart';
+import 'package:bookstore/features/home/persentation/views/widgets/bookrating.dart';
 import 'package:flutter/material.dart';
 
 class bestsellerlistviewitem extends StatelessWidget {
@@ -24,38 +25,36 @@ class bestsellerlistviewitem extends StatelessWidget {
             ),
           ),
           SizedBox(width: 30),
-          Column(
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.5,
-                child: Text(
+          Expanded(
+            child: Column(
+              children: [
+                Text(
                   'The Jungle Book asdasdasdasd',
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: Styles.textstyle20,
                 ),
-              ),
-              const SizedBox(height: 3),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.5,
-                child: Text('Rudyard Kipling', style: Styles.textstyle14),
-              ),
-              const SizedBox(height: 3),
+                const SizedBox(height: 3),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.6,
+                  child: Text('Rudyard Kipling', style: Styles.textstyle14),
+                ),
+                const SizedBox(height: 3),
 
-              Row(
-                children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    child: Text(
+                Row(
+                  children: [
+                    Text(
                       '19.99\$',
                       style: Styles.textstyle20.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                    const Spacer(),
+                    const bookrating(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
