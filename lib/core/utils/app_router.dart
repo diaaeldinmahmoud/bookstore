@@ -1,3 +1,4 @@
+import 'package:bookstore/features/home/persentation/views/bookdetailsview.dart';
 import 'package:bookstore/features/home/persentation/views/widgets/homeviewbody.dart';
 import 'package:bookstore/features/splash/persentation/views/splashview.dart';
 import 'package:go_router/go_router.dart';
@@ -9,6 +10,10 @@ abstract class AppRouter {
     routes: [
       GoRoute(path: '/', builder: (context, state) => splashview()),
       GoRoute(path: homeview, builder: (context, state) => Homeviewbody()),
+      GoRoute(
+        path: bookdetailsview,
+        builder: (context, state) => Bookdetailsview(),
+      ),
     ],
   );
 }
