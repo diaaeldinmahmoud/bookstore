@@ -1,7 +1,5 @@
-import 'package:bookstore/constants.dart';
 import 'package:bookstore/core/utils/styles.dart';
 import 'package:bookstore/features/home/persentation/views/widgets/bestsellerlistview.dart';
-import 'package:bookstore/features/home/persentation/views/widgets/bestsellerlistviewitem.dart.dart';
 import 'package:bookstore/features/home/persentation/views/widgets/customappbar.dart';
 import 'package:bookstore/features/home/persentation/views/widgets/featuredbooklistview.dart';
 import 'package:flutter/material.dart';
