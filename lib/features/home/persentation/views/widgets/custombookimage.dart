@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class custmomlistviewitem extends StatelessWidget {
-  const custmomlistviewitem({super.key});
+class custombookimage extends StatelessWidget {
+  const custombookimage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class custmomlistviewitem extends StatelessWidget {
             image: AssetImage('assets/images/book cover.jpg'),
             fit: BoxFit.fill,
           ),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(16),
           color: Colors.white,
         ),
       ),
