@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class bestsellerlistviewitem extends StatelessWidget {
-  const bestsellerlistviewitem({super.key});
+  const bestsellerlistviewitem.booklistviewitem({super.key});
 
   @override
   Widget build(BuildContext context) {

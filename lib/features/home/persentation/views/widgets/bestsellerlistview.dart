@@ -12,7 +12,7 @@ class bestsellerlistview extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 20.0),
-          child: bestsellerlistviewitem(),
+          child: bestsellerlistviewitem.booklistviewitem(),
         );
       },
       itemCount: 10,
