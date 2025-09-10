@@ -4,6 +4,7 @@ import 'package:bookstore/features/home/persentation/views/widgets/bookactionbut
 import 'package:bookstore/features/home/persentation/views/widgets/bookrating.dart';
 import 'package:bookstore/features/home/persentation/views/widgets/custombookdetailappbar.dart';
 import 'package:bookstore/features/home/persentation/views/widgets/custombookimage.dart';
+import 'package:bookstore/features/home/persentation/views/widgets/similarbookslistview.dart';
 import 'package:flutter/material.dart';
 
 class Bookdetailsviewbody extends StatelessWidget {
@@ -41,6 +42,16 @@ class Bookdetailsviewbody extends StatelessWidget {
           bookrating(alignment: MainAxisAlignment.center),
           const SizedBox(height: 37),
           const bookaction(),
+          SizedBox(height: 50),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "you can also like ",
+              style: Styles.textstyle14.copyWith(fontWeight: FontWeight.w600),
+            ),
+          ),
+          const SizedBox(height: 16),
+          similarlistview(),
         ],
       ),
     );
