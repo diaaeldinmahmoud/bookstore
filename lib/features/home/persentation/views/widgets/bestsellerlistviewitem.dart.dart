@@ -56,7 +56,7 @@ class bestsellerlistviewitem extends StatelessWidget {
                         ),
                       ),
                       const Spacer(),
-                      const bookrating(),
+                      const bookrating(alignment: MainAxisAlignment.start),
                     ],
                   ),
                 ],
