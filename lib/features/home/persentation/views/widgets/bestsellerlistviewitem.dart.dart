@@ -1,11 +1,14 @@
 import 'package:bookstore/core/utils/app_router.dart';
 import 'package:bookstore/core/utils/styles.dart';
+import 'package:bookstore/features/home/data/models/bookmodel/bookmodel.dart';
 import 'package:bookstore/features/home/persentation/views/widgets/bookrating.dart';
+import 'package:bookstore/features/home/persentation/views/widgets/custombookimage.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class bestsellerlistviewitem extends StatelessWidget {
-  const bestsellerlistviewitem.booklistviewitem({super.key});
+  const bestsellerlistviewitem({super.key, required this.bookmodel});
+  final Bookmodel bookmodel;
 
   @override
   Widget build(BuildContext context) {
@@ -17,25 +20,15 @@ class bestsellerlistviewitem extends StatelessWidget {
         height: 125,
         child: Row(
           children: [
-            AspectRatio(
-              aspectRatio: 2.5 / 4,
-              child: Container(
-                decoration: BoxDecoration(
-                  image: const DecorationImage(
-                    image: AssetImage('assets/images/book cover.jpg'),
-                    fit: BoxFit.fill,
-                  ),
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.white,
-                ),
-              ),
+            custombookimage(
+              imageurl: bookmodel.volumeInfo.imageLinks.thumbnail,
             ),
             SizedBox(width: 30),
             Expanded(
               child: Column(
                 children: [
                   Text(
-                    'The Jungle Book asdasdasdasd',
+                    bookmodel.volumeInfo.title!,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: Styles.textstyle20,
@@ -43,20 +36,27 @@ class bestsellerlistviewitem extends StatelessWidget {
                   const SizedBox(height: 3),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.6,
-                    child: Text('Rudyard Kipling', style: Styles.textstyle14),
+                    child: Text(
+                      bookmodel.volumeInfo.authors![0],
+                      style: Styles.textstyle14,
+                    ),
                   ),
                   const SizedBox(height: 3),
 
                   Row(
                     children: [
                       Text(
-                        '19.99\$',
+                        'Free',
                         style: Styles.textstyle20.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       const Spacer(),
-                      const bookrating(alignment: MainAxisAlignment.start),
+                      bookrating(
+                        alignment: MainAxisAlignment.start,
+                        rating: 0,
+                        count: 0,
+                      ),
                     ],
                   ),
                 ],
