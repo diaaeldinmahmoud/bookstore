@@ -10,13 +10,4 @@ void setupServiceLocator() {
   getIt.registerSingleton<HomeRepoImpl>(
     HomeRepoImpl(apiService: getIt.get<ApiService>()),
   );
-  getIt.registerSingleton<authrepo>(
-    authrepo(apiService: getIt.get<ApiService>()),
-  );
-}
-
-class authrepo {
-  final ApiService apiService;
-
-  authrepo({required this.apiService});
 }
