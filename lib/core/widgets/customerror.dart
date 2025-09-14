@@ -7,6 +7,6 @@ class Customerror extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(errmessage, style: Styles.styleRegular16);
+    return Center(child: Text(errmessage, style: Styles.styleRegular16));
   }
 }
