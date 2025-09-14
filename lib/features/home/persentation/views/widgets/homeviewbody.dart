@@ -18,7 +18,7 @@ class Homeviewbody extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 15.0,
-                  vertical: 30.0,
+                  vertical: 20.0,
                 ),
                 child: customappbar(),
               ),
