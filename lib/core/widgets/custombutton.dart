@@ -9,12 +9,14 @@ class Custombutton extends StatelessWidget {
     this.borderradius,
     required this.text,
     this.fontsize,
+    this.onPressed,
   });
   final Color backgroundcolor;
   final Color textcolor;
   final BorderRadius? borderradius;
   final String text;
   final double? fontsize;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class Custombutton extends StatelessWidget {
           ),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           text,
           style: Styles.textstyle18.copyWith(

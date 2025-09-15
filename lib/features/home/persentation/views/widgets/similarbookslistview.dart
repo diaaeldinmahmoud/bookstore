@@ -21,11 +21,11 @@ class similarlistview extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 5.0),
                   child: custombookimage(
                     imageurl:
-                        'https://in.pinterest.com/pin/physics-cover-page-design-ideas--5629568276392855/',
+                        state.books[index].volumeInfo.imageLinks.thumbnail,
                   ),
                 );
               },
-              itemCount: 10,
+              itemCount: state.books.length,
               scrollDirection: Axis.horizontal,
               physics: BouncingScrollPhysics(),
             ),

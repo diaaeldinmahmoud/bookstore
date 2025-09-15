@@ -1,9 +1,11 @@
+import 'package:bookstore/core/utils/app_router.dart';
 import 'package:bookstore/core/widgets/customerror.dart';
 import 'package:bookstore/core/widgets/customloadingindicator.dart';
 import 'package:bookstore/features/home/persentation/manager/featured%20books%20cubit/featured_books_cubit.dart';
 import 'package:bookstore/features/home/persentation/views/widgets/custombookimage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class featuredbookslistview extends StatelessWidget {
   const featuredbookslistview({super.key});
@@ -19,9 +21,17 @@ class featuredbookslistview extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.0),
-                  child: custombookimage(
-                    imageurl:
-                        state.books[index].volumeInfo.imageLinks.thumbnail,
+                  child: GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context).push(
+                        AppRouter.kbookdetailsview,
+                        extra: state.books[index],
+                      );
+                    },
+                    child: custombookimage(
+                      imageurl:
+                          state.books[index].volumeInfo.imageLinks.thumbnail,
+                    ),
                   ),
                 );
               },

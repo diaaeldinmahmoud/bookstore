@@ -9,7 +9,12 @@ class custombookdetailappbar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(),
       child: Row(
         children: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.close, size: 35)),
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.close, size: 35),
+          ),
           Spacer(),
           Icon(Icons.shopping_cart, size: 35, color: Colors.white),
         ],

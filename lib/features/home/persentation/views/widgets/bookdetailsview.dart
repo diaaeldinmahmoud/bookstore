@@ -23,6 +23,6 @@ class _BookdetailsviewState extends State<Bookdetailsview> {
   }
 
   Widget build(BuildContext context) {
-    return const Scaffold(body: Bookdetailsviewbody());
+    return Scaffold(body: Bookdetailsviewbody(bookmodel: widget.book));
   }
 }
